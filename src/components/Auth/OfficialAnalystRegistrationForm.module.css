@@ -1,0 +1,285 @@
+/* src/components/Auth/OfficialAnalystRegistrationForm.module.css */
+.container {
+  display: flex;
+  width: 800px;
+  height: 700px; /* Increased height for more fields */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.leftPanel {
+  flex: 1;
+  background-color: #4CAF50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcomeText {
+  font-size: 32px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.welcomeSubtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  max-width: 250px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.panelButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
+}
+
+.panelButton:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollableContent {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.rightPanelTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.photoUploadSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photoPlaceholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+
+.cameraIcon {
+  stroke: #ccc;
+}
+
+.uploadButton {
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-radius: 25px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.uploadButton:hover {
+  background-color: #f0f8f0;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: calc(100% - 20px);
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 5px 5px 0 0;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.passwordWrapper .input {
+  flex-grow: 1;
+  padding-right: 40px;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  cursor: pointer;
+}
+
+.fileUpload {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fileUpload label {
+  font-size: 14px;
+  color: #555;
+}
+
+.fileButton {
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fileButton:hover {
+  background-color: #f0f8f0;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.primaryButton {
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.primaryButton:hover {
+  background-color: #45a049;
+}
+
+.googleButton {
+  background-color: white;
+  color: #555;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.googleButton:hover {
+  background-color: #f7f7f7;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.loginText {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 25px;
+}
+
+.loginLink {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    max-height: 95vh;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .rightPanelTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .scrollableContent {
+    flex-grow: 0;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}

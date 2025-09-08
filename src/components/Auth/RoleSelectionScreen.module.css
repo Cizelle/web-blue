@@ -1,0 +1,163 @@
+/* src/components/Auth/RoleSelectionScreen.module.css */
+.screenContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Light background similar to login form */
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.demoNavigation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 5px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navButton:hover {
+  background-color: #eee;
+}
+
+.activeNavButton {
+  background-color: #4CAF50; /* Your green theme color */
+  color: white;
+}
+
+.mainTitle {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.roleCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #eee; /* Subtle border */
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.roleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlightedCard {
+  border-color: #4CAF50; /* Highlighted border color */
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.2); /* Subtle green glow */
+}
+
+.roleIconContainer {
+  background-color: #f0f2f5; /* Light background for icon circle */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roleIcon {
+  color: #4CAF50; /* Green icon color */
+}
+
+.cardTitle {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pushes list to bottom */
+}
+
+.keyFeaturesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.keyFeaturesList li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.keyFeaturesList li::before {
+  content: '•'; /* Bullet point */
+  color: #4CAF50; /* Green bullet */
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.continueButton {
+  background-color: #4CAF50; /* Your green theme color */
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.continueButton:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}

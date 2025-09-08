@@ -1,0 +1,202 @@
+/* src/components/Dashboard/CitizenDashboard.module.css */
+.dashboardContainer {
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  padding: 30px;
+  max-width: 1400px; /* Increased max-width */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcomeBanner {
+  background-color: #4CAF50;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.welcomeTitle {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.welcomeSubtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.statusSection {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.statusBadge, .reportsBadge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px; /* Added spacing below the grid */
+}
+
+.featureCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cardSubtitle {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Updated layout for bottom sections */
+.nearbyActivityCard, .myReportsCard {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px; /* Added margin for separation */
+}
+
+.interactiveMap {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  height: 250px; /* Increased map height */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #66bb6a;
+  margin-top: 20px;
+}
+
+.activityList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.activityList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.activityDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.distance {
+  margin-left: auto;
+  color: #888;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.newReportButton {
+  background-color: #f7f9fc;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reportItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.reportIcon {
+  margin-right: 15px;
+  color: #f44336;
+}
+
+.reportDetails {
+  flex-grow: 1;
+}
+
+.reportTitle {
+  font-weight: bold;
+}
+
+.reportSubtitle {
+  color: #888;
+  font-size: 14px;
+}
+
+.reportStatusVerified, .reportStatusPending {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.reportStatusVerified {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+.reportStatusPending {
+  background-color: #fff3e0;
+  color: #ff9800;
+}
+
+.viewAllReports {
+  text-align: center;
+  color: #4CAF50;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}

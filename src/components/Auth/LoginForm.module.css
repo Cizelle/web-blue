@@ -1,0 +1,289 @@
+/* src/components/Auth/LoginForm.module.css */
+.container {
+  display: flex;
+  width: 800px; /* Adjust as needed for the overall form size */
+  height: 600px; /* Increased height for more whitespace */
+  border-radius: 15px;
+  overflow: hidden; /* Ensures rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.leftPanel {
+  flex: 1;
+  background-color: #4CAF50; /* Your original green color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  color: white;
+  position: relative;
+  overflow: hidden; /* For the background shapes */
+}
+
+/* Removed background shapes for the left panel, mimicking the image */
+/*
+.leftPanel::before, .leftPanel::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.leftPanel::before {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+}
+
+.leftPanel::after {
+  width: 150px;
+  height: 150px;
+  top: -30px;
+  right: -30px;
+}
+*/
+
+
+.welcomeText {
+  font-size: 32px;
+  margin-bottom: 10px;
+  z-index: 1; /* Bring text above pseudo-elements */
+}
+
+.welcomeSubtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  max-width: 250px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.panelButton {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+  color: white;
+  border: 1px solid white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
+}
+
+.panelButton:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.rightPanel {
+  flex: 1;
+  background-color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; /* Removed to allow topSpacer to push content down */
+  align-items: center;
+}
+
+.topSpacer {
+  flex-grow: 1; /* This will push content down */
+  min-height: 50px; /* Minimum space above login, adjusts with flex-grow */
+}
+
+.rightPanelTitle {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 25px; /* Adjust spacing after title */
+}
+
+/* Social buttons and orText removed as requested */
+/*
+.socialButtons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.socialButton:hover {
+  border-color: #4CAF50;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.orText {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+  text-align: center;
+}
+*/
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 0px; /* Adjust if needed after removing social buttons */
+}
+
+.inputGroup {
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  display: none; /* Hide labels as per the new design's input fields */
+}
+
+.input {
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Underline style as in the image */
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Light background for inputs */
+  border-radius: 5px 5px 0 0; /* Match design subtle curve */
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Vertically center the items */
+  width: 100%;
+}
+
+.passwordWrapper .input {
+  flex-grow: 1; /* Allow the input to take all available horizontal space */
+  padding-right: 40px; /* Add padding to the right for the icon */
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px; /* Position the icon 10px from the right edge of the wrapper */
+  top: 50%;
+  transform: translateY(-50%); /* This combo centers it vertically */
+  color: #999;
+  cursor: pointer;
+  z-index: 10; /* Ensure the icon is on top of the input field */
+}
+
+.forgotPassword {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #4CAF50;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px; /* More rounded buttons */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  margin-top: 15px; /* Space before main login button */
+}
+
+.primaryButton {
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.primaryButton:hover {
+  background-color: #45a049;
+}
+
+/* Adjusting styles for the social login buttons to fit the right panel style */
+.googleButton, .otpButton {
+  border-radius: 25px;
+  margin-top: 10px; /* Adjust spacing */
+}
+
+.googleButton {
+  background-color: white;
+  color: #555;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.googleButton:hover {
+  background-color: #f7f7f7;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.otpButton {
+  background-color: #f7b539; /* Your original OTP button color */
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.otpButton:hover {
+  background-color: #e6a529;
+}
+
+.otpIcon svg {
+  color: white;
+}
+
+.registerText {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 25px; /* Adjust spacing */
+}
+
+.registerLink {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+/* Removing the divider, as it doesn't fit the new structure well */
+.divider {
+  display: none;
+}
