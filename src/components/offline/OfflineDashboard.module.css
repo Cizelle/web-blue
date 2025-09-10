@@ -1,0 +1,270 @@
+/* src/components/offline/OfflineDashboard.module.css */
+
+.appLayout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mainContentArea {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSection {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.pageSubtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.commStatus {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    border: 1px solid #c8e6c9;
+}
+
+.statusLabel {
+    font-weight: 600;
+    color: #388e3c;
+}
+
+.statusBadge {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.toggleButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.toggleButton:hover {
+    background-color: #388e3c;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.myDeviceCard,
+.receivedDataCard,
+.connectionStatusCard,
+.emergencyCommCard {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cardHeader svg {
+    color: #4CAF50;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.roleBadge {
+    background-color: #dcedc8;
+    color: #388e3c;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dataGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dataItem {
+    background-color: #f7f9f7;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dataLabel {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.dataValue {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.receivedList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.receivedItem {
+    background-color: #f7f9f7;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.itemName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.itemDetails {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.detailLine {
+    margin-bottom: 5px;
+}
+
+.detailLabel {
+    font-weight: 500;
+    color: #777;
+}
+
+/* Connection Status Card Styling */
+.connectionStatusCard {
+    grid-column: span 1;
+}
+
+.connectionDetails {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.connectionDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.connectionInfo {
+    flex-grow: 1;
+}
+
+.connectionNetwork {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.connectionSignal {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.statusBadgeGreen {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Emergency Communication Card Styling */
+.emergencyCommCard {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sosButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sosButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .dashboardGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContentArea {
+        padding: 20px;
+    }
+    .headerSection {
+        text-align: center;
+    }
+    .dataGrid {
+        grid-template-columns: 1fr;
+    }
+}
