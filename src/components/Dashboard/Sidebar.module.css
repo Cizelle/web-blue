@@ -1,0 +1,118 @@
+/* src/components/Dashboard/Sidebar.module.css */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  transition: width 0.3s ease;
+}
+
+.sidebarHeader {
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Pushes the bottom section down */
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+}
+
+.navItem.active {
+  background-color: #e8f5e9;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.navIcon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #666; /* Default icon color */
+}
+
+.navItem:hover .navIcon svg,
+.navItem.active .navIcon svg {
+  stroke: #4CAF50; /* Color on hover and active */
+}
+
+.badge {
+  background-color: #f44336;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.itemSubtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.navItem:hover .itemSubtitle {
+  color: #4CAF50;
+}
+
+.bottomSection {
+  margin-top: auto; /* Pushes to the bottom */
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    /* For smaller screens, the sidebar will likely be a mobile menu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    transform: translateX(-100%);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    /* You would need to add a hamburger button to toggle this */
+  }
+}

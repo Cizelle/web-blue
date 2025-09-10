@@ -178,8 +178,8 @@
 }
 
 .passwordWrapper .input {
-  flex-grow: 1; /* Allow the input to take all available horizontal space */
-  padding-right: 40px; /* Add padding to the right for the icon */
+  flex-grow: 1; 
+  padding-right: 40px; 
 }
 
 .eyeIcon {

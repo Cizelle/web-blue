@@ -1,17 +1,15 @@
 /* src/components/Dashboard/CitizenDashboard.module.css */
-.dashboardContainer {
-  background-color: #f7f9fc;
-  min-height: 100vh;
-  padding: 0;
+.appLayout {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f9fc;
 }
 
-.mainContent {
+.mainContentArea {
+  flex-grow: 1;
   padding: 30px;
-  max-width: 1400px; /* Increased max-width */
-  margin: 0 auto;
-  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .welcomeBanner {
@@ -47,14 +45,23 @@
   font-size: 14px;
 }
 
-.featuresGrid {
+/* New grid layout for the main content cards */
+.contentGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 1fr; /* Two columns: one wider, one narrower */
+  gap: 30px;
+}
+
+.featuresGrid {
+  grid-column: 1 / -1; /* This will make it span all columns */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
-  margin-bottom: 30px; /* Added spacing below the grid */
 }
 
 .featureCard {
+  flex: 1 1 200px;
   background-color: white;
   border-radius: 15px;
   padding: 25px;
@@ -85,19 +92,26 @@
   margin-top: 5px;
 }
 
-/* Updated layout for bottom sections */
-.nearbyActivityCard, .myReportsCard {
+.nearbyActivityCard {
+  grid-column: 1 / 2; /* Occupies the first column */
   background-color: white;
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px; /* Added margin for separation */
+}
+
+.myReportsCard {
+  grid-column: 2 / 3; /* Occupies the second column */
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .interactiveMap {
   background-color: #e8f5e9;
   border: 1px solid #c8e6c9;
-  height: 250px; /* Increased map height */
+  height: 250px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -199,4 +213,22 @@
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+}
+
+/* Responsive adjustments for the grid layout */
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr; /* Stack into a single column on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContentArea {
+    padding: 15px;
+  }
+  
+  .featuresGrid {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
