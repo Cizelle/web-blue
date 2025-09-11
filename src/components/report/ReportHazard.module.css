@@ -10,31 +10,38 @@
 .mainContentArea {
     flex-grow: 1;
     padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+/* New Header Section */
+.headerSection {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pageTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.pageSubtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.8;
+}
+
+
+/* Existing Form Card */
 .reportFormCard {
     background-color: white;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    max-width: 700px;
-    width: 100%;
-}
-
-.formTitle {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.formSubtitle {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
 }
 
 .reportForm {
@@ -55,33 +62,14 @@
     margin-bottom: 8px;
 }
 
-.recommendationsTextarea {
-    background-color: #eef1f4;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-    height: 80px;
-    resize: vertical;
-}
-
-.categoryOptions {
-    display: flex;
-    gap: 20px;
-    font-size: 1rem;
-    color: #333;
-}
-
 .input,
-.textarea {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 1rem;
+.textarea,
+.fileInput {
     width: 100%;
-    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
     transition: border-color 0.2s ease;
 }
 
@@ -93,7 +81,7 @@
 
 .textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .locationGrid {
@@ -102,27 +90,20 @@
     gap: 20px;
 }
 
-.fileInput {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
 .submitButton {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 15px 25px;
+    padding: 15px;
     border-radius: 8px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-top: 10px;
 }
 
-.submitButton:hover {
+.submitButton:hover:not(:disabled) {
     background-color: #388e3c;
 }
 
@@ -135,17 +116,34 @@
     margin-top: 20px;
     padding: 15px;
     border-radius: 8px;
-    font-weight: 600;
+    text-align: center;
+    font-weight: 500;
 }
 
-.success {
+.statusMessage p {
+    margin: 0;
+}
+
+.statusMessage.success {
     background-color: #e8f5e9;
     color: #2e7d32;
-    border: 1px solid #c8e6c9;
 }
 
-.failed {
+.statusMessage.failed {
     background-color: #ffebee;
-    color: #c62828;
-    border: 1px solid #ef9a9a;
+    color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mainContentArea {
+        padding: 20px;
+    }
+    .reportFormCard {
+        padding: 20px;
+    }
+    .locationGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }

@@ -289,29 +289,121 @@
 .reportMissingButton {
     background-color: #f44336;
     color: white;
+    text-decoration: none;
 }
 
 .reportMissingButton:hover {
     background-color: #d32f2f;
 }
 
-/* Responsive adjustments */
+.leaveFamilySection {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.leaveFamilyButton {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.leaveFamilyButton:hover {
+    background-color: #c62828;
+}
+
+
+/* New Modal Styles (adapted from MissingPersonFinder) */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.formSection input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submitButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background-color: #388e3c;
+}
+
 @media (max-width: 768px) {
-    .mainContentArea {
+    .modalContent {
         padding: 20px;
-    }
-    .headerSection, .statusCards, .searchFilterSection {
-        flex-direction: column;
-        text-align: center;
-    }
-    .statusCard {
-        flex-basis: 100%;
-    }
-    .filters {
-        width: 100%;
-        justify-content: space-between;
-    }
-    .alertButtons {
-        flex-direction: column;
     }
 }

@@ -1,7 +1,6 @@
 // src/components/donation/CampaignsPage.tsx
 import React from 'react';
 import styles from './CampaignsPage.module.css';
-import Sidebar from '../Dashboard/Sidebar';
 import { Link } from 'react-router-dom'; // Import Link
 
 const CampaignsPage: React.FC = () => {
@@ -18,28 +17,25 @@ const CampaignsPage: React.FC = () => {
     ];
 
     return (
-        <div className={styles.appLayout}>
-            <Sidebar />
-            <div className={styles.mainContentArea}>
-                <div className={styles.titleSection}>
-                    <h1 className={styles.pageTitle}>Disaster Relief Campaigns</h1>
-                    <p className={styles.pageSubtitle}>Support communities affected by natural disasters by donating to active campaigns. Every contribution makes a difference.</p>
-                </div>
-                <div className={styles.campaignsGrid}>
-                    {campaigns.map((campaign) => (
-                        <div key={campaign.id} className={styles.campaignCard}>
-                            <div className={styles.cardContent}>
-                                <div className={styles.cardName}>{campaign.name}</div>
-                                <div className={styles.cardDescription}>{campaign.description}</div>
-                            </div>
-                            <Link to={`/donate/${encodeURIComponent(campaign.name)}`} className={styles.donateButton}>
-                                Donate Now
-                            </Link>
-                        </div>
-                    ))}
-                </div>
+        <>
+            <div className={styles.titleSection}>
+                <h1 className={styles.pageTitle}>Disaster Relief Campaigns</h1>
+                <p className={styles.pageSubtitle}>Support communities affected by natural disasters by donating to active campaigns. Every contribution makes a difference.</p>
             </div>
-        </div>
+            <div className={styles.campaignsGrid}>
+                {campaigns.map((campaign) => (
+                    <div key={campaign.id} className={styles.campaignCard}>
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardName}>{campaign.name}</div>
+                            <div className={styles.cardDescription}>{campaign.description}</div>
+                        </div>
+                        <Link to={`/donate/${encodeURIComponent(campaign.name)}`} className={styles.donateButton}>
+                            Donate Now
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 

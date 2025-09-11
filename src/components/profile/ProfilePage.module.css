@@ -1,0 +1,296 @@
+/* src/components/profile/ProfilePage.module.css */
+
+.profileContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Green main header */
+.mainHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--primary-color); /* Green background */
+    color: white;
+    border-radius: var(--border-radius-md);
+}
+
+.mainHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.mainHeader p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contentLayout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.personalInfoCard {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+}
+
+.cardHeader {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.premiumTag {
+    background-color: var(--accent-yellow);
+    color: black;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.infoSection {
+    margin-top: 1.5rem;
+}
+
+.sectionHeader {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.infoGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.infoItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.infoLabel {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.infoValue {
+    color: var(--text-color-light);
+}
+
+.otherInfoCard {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2rem;
+}
+
+.otherInfoCard .infoGrid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.medicalContent {
+    background-color: var(--background-color-primary);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.medicalContent p {
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+}
+
+.medicalButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.medicalButton:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Styles for editable fields and buttons */
+.inputField {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--input-background);
+    color: var(--text-color);
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.editButton, .saveButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.editButton {
+    background-color: var(--primary-color);
+}
+
+.editButton:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.saveButton {
+    background-color: var(--success-color);
+}
+
+.saveButton:hover {
+    background-color: var(--success-dark);
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white; /* White background for the modal */
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color); /* Green header for the modal */
+    color: white;
+    border-radius: var(--border-radius-md);
+    padding: 1rem 1.5rem;
+    margin: -2rem -2rem 1.5rem -2rem; /* Pull to edges of modal content padding */
+}
+
+.modalHeader h2 {
+    font-size: 1.5rem;
+    color: white; /* White text for modal header */
+}
+
+.closeButton {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: white; /* White close button */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: var(--accent-yellow); /* Yellow on hover for close button */
+}
+
+.modalBody {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    font-weight: bold;
+    color: var(--primary-color); /* Green labels in the modal form */
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--background-color-primary); /* Light background for inputs */
+    color: var(--text-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.formGroup small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--text-color-light);
+}
+
+.saveModalButton { /* Specific class for modal's save button */
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1.5rem;
+}
+
+.saveModalButton:hover {
+    background-color: var(--primary-color-dark);
+}

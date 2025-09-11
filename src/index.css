@@ -3,3 +3,21 @@ html, body, #root {
   height: 100%;
   margin: 0;
 }
+
+:root {
+    --primary-color: #28a745;
+    --primary-color-dark: #218838;
+    --primary-color-light: #d4edda;
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #f8f9fa;
+    --text-color: #343a40;
+    --text-color-light: #6c757d;
+    --border-color: #dee2e6;
+    --hover-color: #e2e6ea;
+    --input-background: #fdfdfd;
+    
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

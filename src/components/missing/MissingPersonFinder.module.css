@@ -1,0 +1,270 @@
+/* src/components/missing/MissingPersonFinder.module.css */
+
+.appLayout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mainContentArea {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+/* New Green Header Card styles */
+.greenHeaderCard {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerText {
+    text-align: left;
+}
+
+.headerTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.headerSubtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.headerButtonsContainer {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.mainButton {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mainButton:hover {
+    background-color: #2e7d32;
+    transform: translateY(-1px);
+}
+
+.mainButton svg {
+    width: 20px;
+    height: 20px;
+    stroke: white;
+}
+
+.listTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.missingList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.missingItem {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.personPhoto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    align-self: center;
+}
+
+.personDetails {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.personName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.personInfo {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.personDescription {
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.reportFoundButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+.reportFoundButton:hover {
+    background-color: #388e3c;
+}
+
+.reportFoundButton svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Modal Styles - Decreased Height */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 25px; /* Decreased padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modalTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 15px; /* Decreased margin */
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Decreased gap */
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.formSection input,
+.formSection textarea {
+    padding: 10px; /* Decreased padding */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.readOnlyInput {
+    background-color: #f0f0f0;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.submitButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mainContentArea {
+        padding: 20px;
+    }
+    .greenHeaderCard {
+        padding: 20px;
+    }
+    .headerButtonsContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .mainButton {
+        justify-content: center;
+    }
+    .modalContent {
+        padding: 20px;
+    }
+}

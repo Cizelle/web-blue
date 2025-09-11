@@ -17,7 +17,7 @@
 }
 
 .sosContainer {
-    max-width: 600px;
+    max-width: 900vw; /* Increased from 600px to 900px */
     text-align: center;
     background-color: white;
     padding: 40px;

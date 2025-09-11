@@ -1,10 +1,19 @@
-// src/components/Dashboard/Sidebar.tsx
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 const Sidebar: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // In a real application, you would handle authentication state here
+        // e.g., clearing tokens from localStorage, calling a logout API
+        alert('Logging out...');
+
+        // Navigate to the login page after logout
+        navigate('/login');
+    };
 
     return (
         <div className={styles.sidebar}>
@@ -56,8 +65,8 @@ const Sidebar: React.FC = () => {
                     <Link to="/offline" className={styles.navLink}>
                         <div className={styles.navIcon}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 20.007c-2.433 0-4.866-.934-6.721-2.789C3.424 15.352 2.49 12.919 2.49 10.485c0-2.433.934-4.866 2.789-6.721L21 21"/>
-                                <path d="M12 4.007c5.523 0 10 4.477 10 10m-3 3-7-7"/>
+                                <path d="M12 20.007c-2.433 0-4.866-.934-6.721-2.789C3.424 15.352 2.49 12.919 2.49 10.485c0-2.433.934-4.866 2.789-6.721L21 21" />
+                                <path d="M12 4.007c5.523 0 10 4.477 10 10m-3 3-7-7" />
                             </svg>
                         </div>
                         <div className={styles.itemText}>
@@ -66,7 +75,7 @@ const Sidebar: React.FC = () => {
                         </div>
                     </Link>
                 </li>
-                
+
                 {/* SOS */}
                 <li className={`${styles.navItem} ${location.pathname === '/sos' ? styles.active : ''}`}>
                     <Link to="/sos" className={styles.navLink}>
@@ -104,6 +113,23 @@ const Sidebar: React.FC = () => {
                     </Link>
                 </li>
 
+                {/* Missing Person Finder */}
+                <li className={`${styles.navItem} ${location.pathname === '/missing' ? styles.active : ''}`}>
+                    <Link to="/missing" className={styles.navLink}>
+                        <div className={styles.navIcon}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <path d="M20 8v6M23 11h-6"></path>
+                            </svg>
+                        </div>
+                        <div className={styles.itemText}>
+                            <div className={styles.itemTitle}>Missing Persons</div>
+                            <div className={styles.itemSubtitle}>Report or find missing persons</div>
+                        </div>
+                    </Link>
+                </li>
+
                 {/* Donations */}
                 <li className={`${styles.navItem} ${location.pathname === '/campaigns' ? styles.active : ''}`}>
                     <Link to="/campaigns" className={styles.navLink}>
@@ -118,7 +144,7 @@ const Sidebar: React.FC = () => {
                         </div>
                     </Link>
                 </li>
-                
+
                 {/* Simulation Drills */}
                 <li className={`${styles.navItem} ${location.pathname === '/simulation-drills' ? styles.active : ''}`}>
                     <Link to="/simulation-drills" className={styles.navLink}>
@@ -134,7 +160,7 @@ const Sidebar: React.FC = () => {
                         </div>
                     </Link>
                 </li>
-                
+
                 {/* Resources */}
                 <li className={`${styles.navItem} ${location.pathname === '/resources' ? styles.active : ''}`}>
                     <Link to="/resources" className={styles.navLink}>
@@ -170,55 +196,59 @@ const Sidebar: React.FC = () => {
                         </div>
                     </Link>
                 </li>
-
-                {/* Missing Person Finder */}
-                <li className={`${styles.navItem} ${location.pathname === '/missing-person' ? styles.active : ''}`}>
-                    <Link to="/missing-person" className={styles.navLink}>
-                        <div className={styles.navIcon}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                        <div className={styles.itemText}>
-                            <div className={styles.itemTitle}>Missing Person Finder</div>
-                            <div className={styles.itemSubtitle}>Report or find missing persons</div>
-                        </div>
-                    </Link>
-                </li>
             </ul>
 
             {/* Profile and Logout Section */}
             <div className={styles.bottomSection}>
-                <li className={`${styles.navItem} ${location.pathname === '/profile' ? styles.active : ''}`}>
-                    <Link to="/profile" className={styles.navLink}>
-                        <div className={styles.navIcon}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="12" cy="7" r="4"></circle>
-                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                            </svg>
-                        </div>
-                        <div className={styles.itemText}>
-                            <div className={styles.itemTitle}>Profile</div>
-                            <div className={styles.itemSubtitle}>Account settings</div>
-                        </div>
-                    </Link>
-                </li>
-                <li className={`${styles.navItem} ${location.pathname === '/logout' ? styles.active : ''}`}>
-                    <Link to="/logout" className={styles.navLink}>
-                        <div className={styles.navIcon}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                <polyline points="16 17 21 12 16 7"></polyline>
-                                <line x1="21" y1="12" x2="9" y2="12"></line>
-                            </svg>
-                        </div>
-                        <div className={styles.itemText}>
-                            <div className={styles.itemTitle}>Logout</div>
-                            <div className={styles.itemSubtitle}>Sign out of your account</div>
-                        </div>
-                    </Link>
-                </li>
+                <ul className={styles.navList}>
+                    <li className={`${styles.navItem} ${location.pathname === '/profile' ? styles.active : ''}`}>
+                        <Link to="/profile" className={styles.navLink}>
+                            <div className={styles.navIcon}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                </svg>
+                            </div>
+                            <div className={styles.itemText}>
+                                <div className={styles.itemTitle}>Profile</div>
+                                <div className={styles.itemSubtitle}>Account settings</div>
+                            </div>
+                        </Link>
+                    </li>
+
+                    {/* New Settings Link */}
+                    <li className={`${styles.navItem} ${location.pathname === '/settings' ? styles.active : ''}`}>
+                        <Link to="/settings" className={styles.navLink}>
+                            <div className={styles.navIcon}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.39a2 2 0 0 0 .73 2.73l.15.08a2 2 0 0 1 1 1.73v.53a2 2 0 0 1-1 1.73l-.15.08a2 2 0 0 0-.73 2.73l.22.39a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2-2.39v.18a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.73v-.53a2 2 0 0 1 1-1.73l.15-.08a2 2 0 0 0 .73-2.73l-.22-.39a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0v-.18a2 2 0 0 0-2-2z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div className={styles.itemText}>
+                                <div className={styles.itemTitle}>Settings</div>
+                                <div className={styles.itemSubtitle}>App preferences</div>
+                            </div>
+                        </Link>
+                    </li>
+
+                    {/* Logout Button */}
+                    <li className={styles.navItem}>
+                        <a href="#" onClick={handleLogout} className={styles.navLink}>
+                            <div className={styles.navIcon}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                    <polyline points="10 17 15 12 10 7"></polyline>
+                                    <line x1="15" y1="12" x2="3" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div className={styles.itemText}>
+                                <div className={styles.itemTitle}>Log Out</div>
+                                <div className={styles.itemSubtitle}>Sign out of your account</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     );

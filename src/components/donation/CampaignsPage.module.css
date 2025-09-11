@@ -95,6 +95,7 @@
     font-weight: 600;
     align-self: flex-end;
     transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .donateButton:hover {

@@ -1,11 +1,13 @@
-// src/App.tsx
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useState, ReactNode } from 'react';
+import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import './App.css';
+
+// Component Imports
 import LoginForm from './components/Auth/LoginForm';
 import RoleSelectionScreen from './components/Auth/RoleSelectionScreen';
 import CitizenRegistrationForm from './components/Auth/CitizenRegistrationForm';
 import OfficialAnalystRegistrationForm from './components/Auth/OfficialAnalystRegistrationForm';
+import Sidebar from './components/Dashboard/Sidebar';
 import CitizenDashboard from './components/Dashboard/CitizenDashboard';
 import CampaignsPage from './components/donation/CampaignsPage';
 import DonationPage from './components/donation/DonationPage';
@@ -17,6 +19,25 @@ import FamilyTracker from './components/family/FamilyTracker';
 import OfflineDashboard from './components/offline/OfflineDashboard'; 
 import SOSScreen from './components/sos/SOSScreen'; 
 import ReportHazard from './components/report/ReportHazard';
+import MissingPersonFinder from './components/missing/MissingPersonFinder';
+import ProfilePage from './components/profile/ProfilePage';
+import SettingsPage from './components/settings/SettingsPage';
+
+// The single, reusable layout component
+interface DashboardLayoutProps {
+    children: ReactNode;
+}
+
+const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
+    return (
+        <div style={{ display: 'flex', minHeight: '100vh', width: '100%' }}>
+            <Sidebar />
+            <div style={{ flex: 1, padding: '20px' }}>
+                {children}
+            </div>
+        </div>
+    );
+};
 
 const App: React.FC = () => {
     const [user, setUser] = useState<{ email: string, role: string } | null>(null);
@@ -53,30 +74,34 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <Routes>
+                {/* --- Public Routes (accessible without login) --- */}
                 <Route path="/login" element={<LoginForm onRegisterClick={handleRegisterClick} onLoginSuccess={handleLoginSuccess} />} />
                 <Route path="/register" element={<RoleSelectionScreen onRoleSelected={handleRoleSelected} onBackToLogin={handleBackToLogin} />} />
                 <Route path="/register/citizen" element={<CitizenRegistrationForm onBackToLogin={handleBackToLogin} onRegistrationSuccess={(u) => handleRegistrationSuccess({ ...u, role: 'Citizen' })} />} />
                 <Route path="/register/official" element={<OfficialAnalystRegistrationForm onBackToLogin={handleBackToLogin} onRegistrationSuccess={(u) => handleRegistrationSuccess({ ...u, role: 'Official' })} role="Official" />} />
-                <Route path="/offline" element={<OfflineDashboard />} /> {/* Add the new route */}
-                <Route path="/sos" element={<SOSScreen />} /> {/* Add the new route */}
-                <Route path="/report-hazard" element={<ReportHazard />} /> {/* Add the new route */}
-
+                
+                {/* --- Protected Routes (accessible only after login) --- */}
                 {user ? (
                     <>
-                        <Route path="/" element={<CitizenDashboard />} />
-                        <Route path="/campaigns" element={<CampaignsPage />} />
-                        <Route path="/donate/:campaignName" element={<DonationPage />} />
-                        <Route path="/pay/upi" element={<UpiPayment />} />
-                        <Route path="/pay/card" element={<CardPayment />} />
-                        <Route path="/pay/crypto" element={<CryptoPayment />} />
-                        <Route path="/payment-success" element={<PaymentSuccess />} />
-                        {/* New route for Family Tracker */}
-                        <Route path="/family" element={<FamilyTracker />} />
-                        {/* New route for Report Hazard */}
-                        <Route path="/report-hazard" element={<div>Report Hazard Page</div>} />
+                        <Route path="/" element={<DashboardLayout><CitizenDashboard /></DashboardLayout>} />
+                        <Route path="/campaigns" element={<DashboardLayout><CampaignsPage /></DashboardLayout>} />
+                        <Route path="/donate/:campaignName" element={<DashboardLayout><DonationPage /></DashboardLayout>} />
+                        <Route path="/pay/upi" element={<DashboardLayout><UpiPayment /></DashboardLayout>} />
+                        <Route path="/pay/card" element={<DashboardLayout><CardPayment /></DashboardLayout>} />
+                        <Route path="/pay/crypto" element={<DashboardLayout><CryptoPayment /></DashboardLayout>} />
+                        <Route path="/payment-success" element={<DashboardLayout><PaymentSuccess /></DashboardLayout>} />
+                        <Route path="/family" element={<DashboardLayout><FamilyTracker /></DashboardLayout>} />
+                        <Route path="/offline" element={<DashboardLayout><OfflineDashboard /></DashboardLayout>} />
+                        <Route path="/sos" element={<DashboardLayout><SOSScreen /></DashboardLayout>} />
+                        <Route path="/report-hazard" element={<DashboardLayout><ReportHazard /></DashboardLayout>} />
+                        <Route path="/missing" element={<DashboardLayout><MissingPersonFinder /></DashboardLayout>} />
+                        <Route path="/profile" element={<DashboardLayout><ProfilePage /></DashboardLayout>} />
+                        <Route path="/settings" element={<DashboardLayout><SettingsPage /></DashboardLayout>} />
+                        
+                        <Route path="*" element={<Navigate to="/" />} />
                     </>
                 ) : (
-                    <Route path="/*" element={<LoginForm onRegisterClick={handleRegisterClick} onLoginSuccess={handleLoginSuccess} />} />
+                    <Route path="*" element={<Navigate to="/login" />} />
                 )}
             </Routes>
         </div>

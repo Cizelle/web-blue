@@ -1,6 +1,5 @@
 // src/components/report/ReportHazard.tsx
 import React, { useState } from 'react';
-import Sidebar from '../Dashboard/Sidebar';
 import styles from './ReportHazard.module.css';
 
 const ReportHazard: React.FC = () => {
@@ -69,116 +68,114 @@ const ReportHazard: React.FC = () => {
     };
 
     return (
-        <div className={styles.appLayout}>
-            <Sidebar />
-            <div className={styles.mainContentArea}>
-                <div className={styles.reportFormCard}>
-                    <h1 className={styles.formTitle}>Report a Marine Hazard</h1>
-                    <p className={styles.formSubtitle}>Your report helps keep our waters and coastlines safe.</p>
+        <>
+            <div className={styles.headerSection}>
+                <h1 className={styles.pageTitle}>Report a Marine Hazard</h1>
+                <p className={styles.pageSubtitle}>Your report helps keep our waters and coastlines safe.</p>
+            </div>
+            <div className={styles.reportFormCard}>
+                <form onSubmit={handleSubmit} className={styles.reportForm}>
+                    <div className={styles.formSection}>
+                        <label htmlFor="categoryInput" className={styles.formLabel}>Category</label>
+                        <input
+                            list="hazards"
+                            id="categoryInput"
+                            className={styles.input}
+                            value={reportCategory}
+                            onChange={(e) => setReportCategory(e.target.value)}
+                            placeholder="e.g., Oil Spill"
+                        />
+                        <datalist id="hazards">
+                            {marineHazardsRecommendations.map((hazard, index) => (
+                                <option key={index} value={hazard} />
+                            ))}
+                        </datalist>
+                    </div>
 
-                    <form onSubmit={handleSubmit} className={styles.reportForm}>
-                        <div className={styles.formSection}>
-                            <label htmlFor="categoryInput" className={styles.formLabel}>Category</label>
-                            <input
-                                list="hazards"
-                                id="categoryInput"
-                                className={styles.input}
-                                value={reportCategory}
-                                onChange={(e) => setReportCategory(e.target.value)}
-                                placeholder="e.g., Oil Spill"
-                            />
-                            <datalist id="hazards">
-                                {marineHazardsRecommendations.map((hazard, index) => (
-                                    <option key={index} value={hazard} />
-                                ))}
-                            </datalist>
-                        </div>
+                    <div className={styles.formSection}>
+                        <label htmlFor="description" className={styles.formLabel}>Description*</label>
+                        <textarea
+                            id="description"
+                            className={styles.textarea}
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                            placeholder="Describe the hazard in detail..."
+                            required
+                        ></textarea>
+                    </div>
 
-                        <div className={styles.formSection}>
-                            <label htmlFor="description" className={styles.formLabel}>Description*</label>
-                            <textarea
-                                id="description"
-                                className={styles.textarea}
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                                placeholder="Describe the hazard in detail..."
-                                required
-                            ></textarea>
-                        </div>
+                    <div className={styles.formSection}>
+                        <label htmlFor="location" className={styles.formLabel}>Location*</label>
+                        <input
+                            type="text"
+                            id="location"
+                            className={styles.input}
+                            value={location}
+                            onChange={(e) => setLocation(e.target.value)}
+                            placeholder="e.g., Near Marina Beach, Chennai"
+                            required
+                        />
+                    </div>
 
+                    <div className={styles.locationGrid}>
                         <div className={styles.formSection}>
-                            <label htmlFor="location" className={styles.formLabel}>Location*</label>
+                            <label htmlFor="latitude" className={styles.formLabel}>Latitude (Optional)</label>
                             <input
                                 type="text"
-                                id="location"
+                                id="latitude"
                                 className={styles.input}
-                                value={location}
-                                onChange={(e) => setLocation(e.target.value)}
-                                placeholder="e.g., Near Marina Beach, Chennai"
-                                required
+                                value={latitude}
+                                onChange={(e) => setLatitude(e.target.value)}
+                                placeholder="e.g., 13.0827"
                             />
                         </div>
-
-                        <div className={styles.locationGrid}>
-                            <div className={styles.formSection}>
-                                <label htmlFor="latitude" className={styles.formLabel}>Latitude (Optional)</label>
-                                <input
-                                    type="text"
-                                    id="latitude"
-                                    className={styles.input}
-                                    value={latitude}
-                                    onChange={(e) => setLatitude(e.target.value)}
-                                    placeholder="e.g., 13.0827"
-                                />
-                            </div>
-                            <div className={styles.formSection}>
-                                <label htmlFor="longitude" className={styles.formLabel}>Longitude (Optional)</label>
-                                <input
-                                    type="text"
-                                    id="longitude"
-                                    className={styles.input}
-                                    value={longitude}
-                                    onChange={(e) => setLongitude(e.target.value)}
-                                    placeholder="e.g., 80.2707"
-                                />
-                            </div>
-                        </div>
-
                         <div className={styles.formSection}>
-                            <label htmlFor="media" className={styles.formLabel}>Upload Media (Photos/Videos)</label>
+                            <label htmlFor="longitude" className={styles.formLabel}>Longitude (Optional)</label>
                             <input
-                                type="file"
-                                id="media"
-                                className={styles.fileInput}
-                                multiple
-                                accept="image/*,video/*"
-                                onChange={handleFileChange}
+                                type="text"
+                                id="longitude"
+                                className={styles.input}
+                                value={longitude}
+                                onChange={(e) => setLongitude(e.target.value)}
+                                placeholder="e.g., 80.2707"
                             />
                         </div>
+                    </div>
 
-                        <button type="submit" className={styles.submitButton} disabled={submissionStatus === 'pending'}>
-                            {submissionStatus === 'pending' ? 'Submitting...' : 'Submit Report'}
-                        </button>
-                    </form>
+                    <div className={styles.formSection}>
+                        <label htmlFor="media" className={styles.formLabel}>Upload Media (Photos/Videos)</label>
+                        <input
+                            type="file"
+                            id="media"
+                            className={styles.fileInput}
+                            multiple
+                            accept="image/*,video/*"
+                            onChange={handleFileChange}
+                        />
+                    </div>
 
-                    {submissionStatus === 'success' && (
-                        <div className={`${styles.statusMessage} ${styles.success}`}>
-                            <p>Report submitted successfully! Thank you for your contribution.</p>
-                        </div>
-                    )}
-                    {submissionStatus === 'pending' && (
-                        <div className={styles.statusMessage}>
-                            <p>Submission pending...</p>
-                        </div>
-                    )}
-                    {submissionStatus === 'failed' && (
-                        <div className={`${styles.statusMessage} ${styles.failed}`}>
-                            <p>Submission failed. Please fill in all mandatory fields.</p>
-                        </div>
-                    )}
-                </div>
+                    <button type="submit" className={styles.submitButton} disabled={submissionStatus === 'pending'}>
+                        {submissionStatus === 'pending' ? 'Submitting...' : 'Submit Report'}
+                    </button>
+                </form>
+
+                {submissionStatus === 'success' && (
+                    <div className={`${styles.statusMessage} ${styles.success}`}>
+                        <p>Report submitted successfully! Thank you for your contribution.</p>
+                    </div>
+                )}
+                {submissionStatus === 'pending' && (
+                    <div className={styles.statusMessage}>
+                        <p>Submission pending...</p>
+                    </div>
+                )}
+                {submissionStatus === 'failed' && (
+                    <div className={`${styles.statusMessage} ${styles.failed}`}>
+                        <p>Submission failed. Please fill in all mandatory fields.</p>
+                    </div>
+                )}
             </div>
-        </div>
+        </>
     );
 };
 
