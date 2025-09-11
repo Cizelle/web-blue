@@ -1,0 +1,531 @@
+{
+  "settings": {
+    "title": "ऐप सेटिंग्स",
+    "subtitle": "अपने ऐप अनुभव को अनुकूलित करें और अपनी सुरक्षा प्रबंधित करें।",
+    "accountSecurity": "खाता और सुरक्षा",
+    "changePassword": "पासवर्ड बदलें",
+    "twoFactorAuth": "दो-स्तरीय प्रमाणीकरण (2FA)",
+    "appPreferences": "ऐप वरीयताएँ",
+    "theme": "थीम",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड",
+    "language": "भाषा",
+    "english": "अंग्रेज़ी",
+    "hindi": "हिंदी",
+    "privacyData": "गोपनीयता और डेटा",
+    "locationSharing": "स्थान साझा करना",
+    "exportData": "मेरा डेटा निर्यात करें",
+    "dangerZone": "खतरे का क्षेत्र",
+    "deleteAccount": "मेरा खाता हटाएँ",
+    "changeButton": "बदलें",
+    "downloadButton": "डाउनलोड",
+    "deleteButton": "खाता हटाएँ"
+  },
+  "profile": {
+    "header": "मेरी प्रोफ़ाइल",
+    "editProfile": "प्रोफ़ाइल संपादित करें",
+    "username": "उपयोगकर्ता नाम",
+    "name": "नाम",
+    "gender": "लिंग",
+    "genderOptions": {
+      "male": "पुरुष",
+      "female": "महिला",
+      "other": "अन्य"
+    },
+    "dob": "जन्म तिथि",
+    "phoneNumber": "फ़ोन नंबर",
+    "address": "पता",
+    "save": "परिवर्तन सहेजें"
+  },
+  "registration": {
+    "welcomeTitle": "सहायक में आपका स्वागत है!",
+    "welcomeSubtitle": "हमसे जुड़े रहने के लिए कृपया अपनी व्यक्तिगत जानकारी से लॉगिन करें",
+    "loginButton": "लॉगिन",
+    "registerTitle": "पंजीकरण करें",
+    "errorMessage": "यह Google खाता पहले से पंजीकृत है। कृपया लॉगिन करें।",
+    "uploadPhoto": "फ़ोटो अपलोड करें *",
+    "fullNamePlaceholder": "अपना पूरा नाम दर्ज करें",
+    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "phonePlaceholder": "अपना फ़ोन नंबर दर्ज करें",
+    "statePlaceholder": "अपना राज्य दर्ज करें",
+    "countryPlaceholder": "अपना देश दर्ज करें",
+    "passwordPlaceholder": "पासवर्ड बनाएँ",
+    "confirmPasswordPlaceholder": "अपना पासवर्ड पुष्टि करें",
+    "registerButton": "पंजीकरण करें",
+    "registerWithGoogle": "Google से पंजीकरण करें",
+    "alreadyHaveAccount": "क्या आपके पास पहले से खाता है?",
+    "loginLink": "लॉगिन"
+  },
+  "login": {
+    "welcomeTitle": "सहायक में आपका स्वागत है!",
+    "welcomeSubtitle": "हमसे जुड़े रहने के लिए कृपया अपनी व्यक्तिगत जानकारी से लॉगिन करें",
+    "registerButton": "पंजीकरण",
+    "loginTitle": "लॉगिन",
+    "errorMessage": "अमान्य उपयोगकर्ता नाम या पासवर्ड। कृपया पुनः प्रयास करें।",
+    "usernamePlaceholder": "अपना उपयोगकर्ता नाम दर्ज करें",
+    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "loginButton": "लॉगिन",
+    "loginWithGoogle": "Google से लॉगिन करें",
+    "loginWithOtp": "OTP से लॉगिन करें",
+    "noAccount": "क्या आपका खाता नहीं है?",
+    "registerLink": "पंजीकरण करें"
+  },
+  "officialRegistration": {
+    "registerTitle": "{{role}} के रूप में पंजीकरण करें",
+    "errorMessage": "यह Google खाता पहले से पंजीकृत है। कृपया लॉगिन करें।",
+    "uploadPhoto": "फ़ोटो अपलोड करें *",
+    "fullNamePlaceholder": "पूरा नाम *",
+    "emailPlaceholder": "ईमेल *",
+    "phonePlaceholder": "फ़ोन नंबर *",
+    "designationPlaceholder": "पदनाम *",
+    "organizationPlaceholder": "संगठन का नाम *",
+    "employeeIdPlaceholder": "कर्मचारी आईडी *",
+    "idProof": "पहचान प्रमाण दस्तावेज़ *",
+    "authLetter": "अधिकृत पत्र *",
+    "uploadDocument": "दस्तावेज़ अपलोड करें",
+    "statePlaceholder": "राज्य *",
+    "countryPlaceholder": "देश *",
+    "passwordPlaceholder": "पासवर्ड बनाएँ *",
+    "confirmPasswordPlaceholder": "पासवर्ड की पुष्टि करें *",
+    "registerButton": "पंजीकरण करें",
+    "registerWithGoogle": "Google से पंजीकरण करें",
+    "alreadyHaveAccount": "क्या आपके पास पहले से खाता है?",
+    "loginLink": "लॉगिन"
+  },
+  "roleSelection": {
+    "chooseRole": "अपनी भूमिका चुनें",
+    "subtitle": "तटीय खतरे प्रबंधन के लिए उपयुक्त उपकरण और सुविधाओं का उपयोग करने हेतु अपनी भूमिका चुनें",
+    "login": "लॉगिन",
+    "register": "पंजीकरण",
+    "continueButton": "जारी रखें",
+    "citizen": {
+      "title": "नागरिक",
+      "description": "खतरों की रिपोर्ट करें, आपातकालीन सेवाओं तक पहुँचें",
+      "features": {
+        "reportHazards": "खतरे रिपोर्ट करें",
+        "submitSOS": "SOS भेजें",
+        "trackFamily": "परिवार को ट्रैक करें",
+        "makeDonations": "दान करें",
+        "emergencyDrills": "आपातकालीन अभ्यास"
+      }
+    },
+    "official": {
+      "title": "अधिकारी",
+      "description": "रिपोर्ट सत्यापित करें, आपातकालीन प्रतिक्रियाओं का प्रबंधन करें",
+      "features": {
+        "validateReports": "रिपोर्ट सत्यापित करें",
+        "manageHotspots": "हॉटस्पॉट प्रबंधित करें",
+        "emergencyResponse": "आपातकालीन प्रतिक्रिया",
+        "resourceAllocation": "संसाधन आवंटन"
+      }
+    },
+    "analyst": {
+      "title": "विश्लेषक",
+      "description": "रुझानों की निगरानी करें, डेटा अंतर्दृष्टि का विश्लेषण करें",
+      "features": {
+        "socialMediaMonitoring": "सोशल मीडिया निगरानी",
+        "trendAnalysis": "रुझान विश्लेषण",
+        "dataInsights": "डेटा अंतर्दृष्टि",
+        "generateReports": "रिपोर्ट जनरेट करें"
+      }
+    }
+  },
+  "citizenDashboard": {
+    "welcomeBanner": {
+      "title": "वापसी पर स्वागत है!",
+      "subtitle": "सुरक्षित रहें और खतरों की रिपोर्ट करके अपने समुदाय की मदद करें",
+      "statusActive": "स्थिति: सक्रिय",
+      "reportsThisMonth": "इस महीने {{count}} रिपोर्ट"
+    },
+    "features": {
+      "reportHazard": {
+        "title": "खतरे की रिपोर्ट करें",
+        "subtitle": "नई रिपोर्ट सबमिट करें"
+      },
+      "donate": {
+        "title": "दान करें",
+        "subtitle": "पीड़ितों की मदद करें"
+      },
+      "trackFamily": {
+        "title": "परिवार को ट्रैक करें",
+        "subtitle": "प्रियजनों को खोजें"
+      },
+      "offlineMode": {
+        "title": "ऑफ़लाइन मोड",
+        "subtitle": "आपातकालीन बैकअप"
+      }
+    },
+    "nearbyActivity": {
+      "title": "नज़दीकी गतिविधि",
+      "mapPlaceholder": "इंटरैक्टिव मानचित्र प्लेसहोल्डर",
+      "warnings": {
+        "highWave": "ऊँची लहर की चेतावनी",
+        "shelterAvailable": "शरण उपलब्ध"
+      }
+    },
+    "myReports": {
+      "title": "मेरी हाल की रिपोर्टें",
+      "newReportButton": "+ नई",
+      "reportItems": {
+        "highWaves": {
+          "title": "ऊँची लहरें",
+          "location": "मरीना बीच",
+          "statusVerified": "सत्यापित"
+        },
+        "flooding": {
+          "title": "बाढ़",
+          "location": "ईसीआर रोड",
+          "statusPending": "लंबित"
+        }
+      },
+      "viewAllReports": "सभी रिपोर्ट देखें"
+    }
+  },
+  "sidebar": {
+    "logo": "सहायक",
+    "navItems": {
+      "dashboard": {
+        "title": "डैशबोर्ड",
+        "subtitle": "समीक्षा और त्वरित क्रियाएँ"
+      },
+      "family": {
+        "title": "परिवार",
+        "subtitle": "प्रियजनों को खोजें"
+      },
+      "offline": {
+        "title": "ऑफ़लाइन",
+        "subtitle": "कोई इंटरनेट नहीं? कोई समस्या नहीं!"
+      },
+      "sos": {
+        "title": "SOS",
+        "subtitle": "आपातकालीन अलर्ट"
+      },
+      "reportHazard": {
+        "title": "खतरे की रिपोर्ट करें",
+        "subtitle": "वास्तविक समय की घटनाएँ साझा करें"
+      },
+      "missingPersons": {
+        "title": "लापता व्यक्ति",
+        "subtitle": "लापता व्यक्तियों की रिपोर्ट करें या खोजें"
+      },
+      "donations": {
+        "title": "दान",
+        "subtitle": "आपदा राहत का समर्थन करें"
+      },
+      "simulationDrills": {
+        "title": "अभ्यास ड्रिल",
+        "subtitle": "आपातकालीन प्रक्रियाओं का अभ्यास करें"
+      },
+      "resources": {
+        "title": "संसाधन",
+        "subtitle": "शरण, गाइड और सुरक्षा जानकारी"
+      },
+      "allReports": {
+        "title": "सभी रिपोर्टें",
+        "subtitle": "विस्तृत रिपोर्ट और फ़िल्टर देखें"
+      },
+      "profile": {
+        "title": "प्रोफ़ाइल",
+        "subtitle": "खाता सेटिंग्स"
+      },
+      "settings": {
+        "title": "सेटिंग्स",
+        "subtitle": "ऐप वरीयताएँ"
+      },
+      "logout": {
+        "title": "लॉगआउट",
+        "subtitle": "अपने खाते से साइन आउट करें"
+      }
+    }
+  },
+  "donationPage": {
+    "unknownCampaign": "अज्ञात अभियान",
+    "paymentMethodLabel": "भुगतान विधि चुनें",
+    "upi": "यूपीआई",
+    "card": "कार्ड",
+    "crypto": "क्रिप्टो",
+    "amountLabel": "दान राशि (₹)",
+    "amountPlaceholder": "उदा. 500",
+    "purposeLabel": "उद्देश्य (वैकल्पिक)",
+    "purposePlaceholder": "उदा. चिकित्सा सामग्री के लिए",
+    "payButton": "भुगतान करें"
+  },
+  "familyTracker": {
+    "pageTitle": "परिवार ट्रैकर",
+    "pageSubtitle": "अपने प्रियजनों को सुरक्षित रखें",
+    "addMemberButton": "+ सदस्य जोड़ें",
+    "joinFamilyButton": "परिवार से जुड़ें",
+    "locationMapTitle": "परिवार का स्थान मानचित्र",
+    "mapPlaceholder": "यहाँ मानचित्र की सुविधा जोड़ी जाएगी।",
+    "status": {
+      "safe": "सुरक्षित",
+      "at-risk": "जोखिम में",
+      "missing": "लापता"
+    },
+    "searchPlaceholder": "परिवार के सदस्यों को खोजें...",
+    "filter": {
+      "all": "सभी",
+      "safe": "सुरक्षित",
+      "at-risk": "जोखिम में",
+      "missing": "लापता"
+    },
+    "noMembersFound": "कोई परिवार सदस्य नहीं मिला।",
+    "lastSeen": "अंतिम बार देखा गया:",
+    "deviceId": "डिवाइस आईडी:",
+    "emergencyActionsTitle": "आपातकालीन क्रियाएँ",
+    "sendAlertButton": "सभी परिवार को अलर्ट भेजें",
+    "reportMissingButton": "लापता रिपोर्ट करें",
+    "leaveFamilyButton": "परिवार छोड़ें",
+    "leaveFamilyConfirm": "क्या आप वाकई परिवार छोड़ना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।",
+    "leaveFamilySuccess": "आपने सफलतापूर्वक परिवार छोड़ दिया है।",
+    "alertSent": "सभी परिवार के सदस्यों को अलर्ट भेजा गया!",
+    "addMemberModal": {
+      "title": "नया परिवार सदस्य जोड़ें",
+      "nameLabel": "नाम:",
+      "namePlaceholder": "नाम दर्ज करें",
+      "phoneLabel": "फ़ोन नंबर:",
+      "phonePlaceholder": "फ़ोन नंबर दर्ज करें",
+      "addButton": "जोड़ें"
+    }
+  },
+  "missingPersons": {
+    "pageTitle": "लापता व्यक्ति खोजक",
+    "pageSubtitle": "अपने समुदाय में लापता व्यक्तियों की रिपोर्ट करें या ट्रैक करें।",
+    "fileComplaintButton": "लापता व्यक्ति की रिपोर्ट दर्ज करें",
+    "reportFoundButton": "मिला हुआ व्यक्ति रिपोर्ट करें",
+    "listTitle": "लापता व्यक्ति की शिकायतें",
+    "item": {
+      "age": "आयु:",
+      "weight": "वज़न (किग्रा):",
+      "phone": "फ़ोन नंबर:",
+      "description": "विवरण (अनिवार्य):",
+      "photo": "फ़ोटो:",
+      "location": "स्थान:",
+      "time": "समय:",
+      "uploadPicture": "चित्र अपलोड करें (अनिवार्य):"
+    },
+    "actionButton": "मिला",
+    "fileComplaintModal": {
+      "title": "लापता व्यक्ति शिकायत दर्ज करें",
+      "submitButton": "शिकायत सबमिट करें"
+    },
+    "reportFoundModal": {
+      "title": "मिला हुआ व्यक्ति रिपोर्ट करें",
+      "submitButton": "रिपोर्ट सबमिट करें"
+    },
+    "alerts": {
+      "complaintSuccess": "लापता व्यक्ति की शिकायत सफलतापूर्वक दर्ज हुई!",
+      "reportSuccess": "मिला हुआ व्यक्ति सफलतापूर्वक रिपोर्ट हुआ!"
+    },
+    "dummyData": {
+      "person1": {
+        "name": "आलोक सिंह",
+        "description": "बाढ़ के दौरान लापता, अंतिम बार नदी किनारे देखा गया। नीली जैकेट पहने थे।"
+      },
+      "person2": {
+        "name": "प्रिया शर्मा",
+        "description": "अपने घर से गायब हो गईं। लाल ड्रेस पहने थीं।"
+      }
+    }
+  },
+  "offlineDashboard": {
+    "pageTitle": "ऑफ़लाइन मोड डैशबोर्ड",
+    "pageSubtitle": "कम कनेक्टिविटी वाले क्षेत्रों में जुड़े रहें और डेटा साझा करें।",
+    "commStatus": {
+      "label": "वर्तमान संचार:",
+      "methods": {
+        "wifiDirect": "वाई-फाई डायरेक्ट",
+        "bluetooth": "ब्लूटूथ",
+        "sms": "एसएमएस"
+      }
+    },
+    "connectionStatusCard": {
+      "title": "कनेक्शन स्थिति",
+      "dotConnected": "नेटवर्क कनेक्टेड",
+      "signalLabel": "{{type}} • {{strength}} सिग्नल"
+    },
+    "receivedDataCard": {
+      "title": "नज़दीकी उपकरणों से प्राप्त डेटा",
+      "label": {
+        "deviceId": "डिवाइस आईडी:",
+        "battery": "बैटरी:",
+        "signal": "सिग्नल:",
+        "location": "स्थान:"
+      },
+      "role": {
+        "citizen": "नागरिक",
+        "refugee": "शरणार्थी"
+      },
+      "dummyData": {
+        "person1": {
+          "name": "जॉन डो",
+          "role": "शरणार्थी"
+        },
+        "person2": {
+          "name": "सीता",
+          "role": "नागरिक"
+        },
+        "person3": {
+          "name": "मिशा",
+          "role": "शरणार्थी"
+        }
+      }
+    },
+    "myDeviceCard": {
+      "title": "मेरे डिवाइस का डेटा",
+      "label": {
+        "name": "नाम",
+        "phone": "फ़ोन नंबर",
+        "deviceId": "डिवाइस आईडी",
+        "battery": "बैटरी",
+        "signal": "सिग्नल",
+        "location": "स्थान (अक्षांश/देशांतर)"
+      }
+    }
+  },
+  "profilePage": {
+    "mainHeader": {
+      "title": "उपयोगकर्ता प्रोफ़ाइल",
+      "subtitle": "अपनी व्यक्तिगत और चिकित्सीय जानकारी देखें और प्रबंधित करें।"
+    },
+    "personalInfoCard": {
+      "cardHeader": "आपका नाम",
+      "premiumTag": "प्रीमियम उपयोगकर्ता",
+      "sectionHeader": "व्यक्तिगत जानकारी",
+      "labels": {
+        "fullName": "पूरा नाम:",
+        "dob": "जन्म तिथि:",
+        "gender": "लिंग:",
+        "emergencyContact": "आपातकालीन संपर्क:",
+        "height": "ऊँचाई:",
+        "weight": "वज़न:",
+        "address": "पता:"
+      },
+      "buttons": {
+        "edit": "प्रोफ़ाइल संपादित करें",
+        "save": "प्रोफ़ाइल सहेजें"
+      }
+    },
+    "medicalDataCard": {
+      "sectionHeader": "चिकित्सीय रिकॉर्ड",
+      "noDataMessage": "अभी तक कोई चिकित्सीय डेटा जोड़ा नहीं गया है।",
+      "addButton": "चिकित्सीय डेटा जोड़ें"
+    },
+    "medicalDataModal": {
+      "title": "चिकित्सीय जानकारी जोड़ें",
+      "closeButton": "×",
+      "labels": {
+        "allergies": "एलर्जी",
+        "disabilities": "विकलांगताएँ",
+        "bloodGroup": "रक्त समूह",
+        "knownHospitals": "ज्ञात अस्पताल",
+        "pastMedicalHistory": "पूर्व चिकित्सा इतिहास",
+        "uploadReports": "चिकित्सीय रिपोर्ट अपलोड करें"
+      },
+      "placeholders": {
+        "allergies": "उदा., पेनिसिलिन, मूँगफली",
+        "disabilities": "उदा., दृष्टि हानि",
+        "bloodGroup": "उदा., A+",
+        "knownHospitals": "आपने जिन अस्पतालों का दौरा किया है, उन्हें सूचीबद्ध करें",
+        "pastMedicalHistory": "संक्षेप में अपना चिकित्सा इतिहास लिखें"
+      },
+      "uploadNote": "महत्वपूर्ण चिकित्सीय फ़ाइलें अपलोड करें (PDF, इमेज आदि)।",
+      "saveButton": "चिकित्सीय डेटा सहेजें"
+    }
+  },
+  "reportHazard": {
+    "mainHeader": {
+      "title": "समुद्री खतरे की रिपोर्ट करें",
+      "subtitle": "आपकी रिपोर्ट हमारे तटों और जल क्षेत्रों को सुरक्षित रखने में मदद करती है।"
+    },
+    "labels": {
+      "category": "श्रेणी",
+      "description": "विवरण*",
+      "location": "स्थान*",
+      "latitude": "अक्षांश (वैकल्पिक)",
+      "longitude": "देशांतर (वैकल्पिक)",
+      "media": "मीडिया अपलोड करें (फ़ोटो/वीडियो)"
+    },
+    "placeholders": {
+      "category": "उदा., तेल रिसाव",
+      "description": "खतरे का विस्तार से वर्णन करें...",
+      "location": "उदा., मरीना बीच, चेन्नई के पास",
+      "latitude": "उदा., 13.0827",
+      "longitude": "उदा., 80.2707"
+    },
+    "recommendations": {
+      "ripCurrents": "तेज़ धाराएँ",
+      "oilSpills": "तेल रिसाव",
+      "floatingDebris": "तैरता हुआ मलबा",
+      "dangerousMarineLife": "खतरनाक समुद्री जीव",
+      "pollutedWater": "प्रदूषित पानी",
+      "unsafeWeather": "असुरक्षित मौसम",
+      "damagedInfrastructure": "क्षतिग्रस्त ढाँचा"
+    },
+    "buttons": {
+      "submit": "रिपोर्ट सबमिट करें",
+      "submitting": "सबमिट हो रहा है..."
+    },
+    "alerts": {
+      "success": "रिपोर्ट सफलतापूर्वक सबमिट हुई! आपके योगदान के लिए धन्यवाद।",
+      "pending": "सबमिशन लंबित...",
+      "failed": "सबमिशन असफल। कृपया सभी अनिवार्य फ़ील्ड भरें।",
+      "missingFields": "सबमिशन असफल। कृपया अनिवार्य फ़ील्ड (स्थान और विवरण) भरें।"
+    }
+  },
+  "sosScreen": {
+    "title": "आपातकालीन SOS",
+    "subtitle": "नीचे दिए गए बटन को दबाएँ ताकि तुरंत अलर्ट अधिकारियों और आपके आपातकालीन संपर्कों को भेजा जा सके।",
+    "button": "SOS",
+    "alertMessage": "SOS सिग्नल भेजा गया! मदद रास्ते में है।",
+    "howItWorks": {
+      "title": "SOS कैसे काम करता है",
+      "description": "जब आप SOS बटन दबाते हैं, तो आपके फ़ोन का स्थान, चिकित्सीय जानकारी और संकट संकेत आपातकालीन सेवाओं और आपके पंजीकृत परिवार के सदस्यों को भेजा जाएगा। यह कम सिग्नल क्षेत्रों में भी SMS या उपलब्ध अन्य संचार तरीकों का उपयोग करके काम करता है।"
+    },
+    "stayCalm": {
+      "title": "शांत रहें",
+      "description": "बटन दबाने के बाद शांत रहें और यदि संभव हो तो अपनी वर्तमान स्थिति में बने रहें। सिस्टम आपके स्थान को अपडेट करता रहेगा।"
+    }
+  },
+  "cardPayment": {
+    "title": "कार्ड से भुगतान करें",
+    "donationAmount": "दान राशि:",
+    "purpose": "उद्देश्य:",
+    "cardNumberLabel": "कार्ड नंबर",
+    "cardNameLabel": "कार्डधारक का नाम",
+    "expiryLabel": "समाप्ति तिथि",
+    "cvvLabel": "CVV",
+    "payNowButton": "अभी भुगतान करें",
+    "fillInAlert": "कृपया सभी कार्ड विवरण भरें।"
+  },
+  "cryptoPayment": {
+    "title": "क्रिप्टो से भुगतान करें",
+    "donationAmount": "दान राशि:",
+    "purpose": "उद्देश्य:",
+    "instruction1": "कृपया नीचे दिए गए वॉलेट पते पर {{amount}} भेजें।",
+    "instruction2": "सुनिश्चित करें कि आप सही क्रिप्टोकरेंसी भेज रहे हैं।",
+    "copyButton": "पता कॉपी करें",
+    "alertMessage": "वॉलेट पता क्लिपबोर्ड पर कॉपी हुआ!",
+    "paidButton": "मैंने भुगतान कर दिया है"
+  },
+  "paymentSuccess": {
+    "title": "भुगतान सफल!",
+    "message1": "आपके उदार दान के लिए धन्यवाद",
+    "message2": "आपका योगदान ज़रूरतमंदों को महत्वपूर्ण सहायता प्रदान करने में मदद करता है।",
+    "paymentMethod": "भुगतान विधि:",
+    "goHomeButton": "डैशबोर्ड पर जाएँ"
+  },
+  "upiPayment": {
+    "title": "यूपीआई से भुगतान करें",
+    "donationAmount": "दान राशि:",
+    "purpose": "उद्देश्य:",
+    "upiIdLabel": "अपना यूपीआई आईडी दर्ज करें",
+    "upiIdPlaceholder": "उदा., yourname@bank",
+    "sendRequestButton": "भुगतान अनुरोध भेजें",
+    "requestSent": "भुगतान अनुरोध भेजा गया। पुष्टि की प्रतीक्षा...",
+    "timeRemaining": "शेष समय:",
+    "invalidUpiId": "कृपया मान्य यूपीआई आईडी दर्ज करें।",
+    "expiredAlert": "भुगतान अनुरोध की समय सीमा समाप्त। कृपया पुनः प्रयास करें।"
+  }
+}

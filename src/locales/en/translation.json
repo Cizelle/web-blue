@@ -1,0 +1,531 @@
+{
+  "settings": {
+    "title": "App Settings",
+    "subtitle": "Customize your app experience and manage your security.",
+    "accountSecurity": "Account & Security",
+    "changePassword": "Change Password",
+    "twoFactorAuth": "Two-Factor Authentication (2FA)",
+    "appPreferences": "App Preferences",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language",
+    "english": "English",
+    "hindi": "Hindi",
+    "privacyData": "Privacy & Data",
+    "locationSharing": "Location Sharing",
+    "exportData": "Export My Data",
+    "dangerZone": "Danger Zone",
+    "deleteAccount": "Delete My Account",
+    "changeButton": "Change",
+    "downloadButton": "Download",
+    "deleteButton": "Delete Account"
+  },
+  "profile": {
+    "header": "My Profile",
+    "editProfile": "Edit Profile",
+    "username": "Username",
+    "name": "Name",
+    "gender": "Gender",
+    "genderOptions": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    },
+    "dob": "Date of Birth",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "save": "Save Changes"
+  },
+  "registration": {
+    "welcomeTitle": "Welcome to Sahayak!",
+    "welcomeSubtitle": "To keep connected with us please login with your personal info",
+    "loginButton": "LOGIN",
+    "registerTitle": "Register",
+    "errorMessage": "This Google account is already registered. Please log in.",
+    "uploadPhoto": "Upload Photo *",
+    "fullNamePlaceholder": "Enter your full name",
+    "emailPlaceholder": "Enter your email",
+    "phonePlaceholder": "Enter your phone number",
+    "statePlaceholder": "Enter your state",
+    "countryPlaceholder": "Enter your country",
+    "passwordPlaceholder": "Create a password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "registerButton": "Register",
+    "registerWithGoogle": "Register with Google",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Login"
+  },
+  "login": {
+    "welcomeTitle": "Welcome to Sahayak!",
+    "welcomeSubtitle": "To keep connected with us please login with your personal info",
+    "registerButton": "REGISTER",
+    "loginTitle": "Login",
+    "errorMessage": "Invalid username or password. Please try again.",
+    "usernamePlaceholder": "Enter your username",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Login",
+    "loginWithGoogle": "Login with Google",
+    "loginWithOtp": "Login with OTP",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Register"
+  },
+  "officialRegistration": {
+    "registerTitle": "Register as {{role}}",
+    "errorMessage": "This Google account is already registered. Please log in.",
+    "uploadPhoto": "Upload Photo *",
+    "fullNamePlaceholder": "Full Name *",
+    "emailPlaceholder": "Email *",
+    "phonePlaceholder": "Phone Number *",
+    "designationPlaceholder": "Designation *",
+    "organizationPlaceholder": "Organization Name *",
+    "employeeIdPlaceholder": "Employee ID *",
+    "idProof": "ID Proof Document *",
+    "authLetter": "Authorization Letter *",
+    "uploadDocument": "Upload Document",
+    "statePlaceholder": "State *",
+    "countryPlaceholder": "Country *",
+    "passwordPlaceholder": "Create a password *",
+    "confirmPasswordPlaceholder": "Confirm your password *",
+    "registerButton": "Register",
+    "registerWithGoogle": "Register with Google",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Login"
+  },
+  "roleSelection": {
+    "chooseRole": "Choose Your Role",
+    "subtitle": "Select your role to access the appropriate tools and features for coastal hazard management",
+    "login": "Login",
+    "register": "Register",
+    "citizen": {
+      "title": "Citizen",
+      "description": "Report hazards, access emergency services",
+      "features": {
+        "reportHazards": "Report Hazards",
+        "submitSOS": "Submit SOS",
+        "trackFamily": "Track Family",
+        "makeDonations": "Make Donations",
+        "emergencyDrills": "Emergency Drills"
+      }
+    },
+    "official": {
+      "title": "Official",
+      "description": "Validate reports, manage emergency responses",
+      "features": {
+        "validateReports": "Validate Reports",
+        "manageHotspots": "Manage Hotspots",
+        "emergencyResponse": "Emergency Response",
+        "resourceAllocation": "Resource Allocation"
+      }
+    },
+    "analyst": {
+      "title": "Analyst",
+      "description": "Monitor trends, analyze data insights",
+      "features": {
+        "socialMediaMonitoring": "Social Media Monitoring",
+        "trendAnalysis": "Trend Analysis",
+        "dataInsights": "Data Insights",
+        "generateReports": "Generate Reports"
+      }
+    },
+    "continueButton": "Continue as"
+  },
+  "citizenDashboard": {
+    "welcomeBanner": {
+      "title": "Welcome back!",
+      "subtitle": "Stay safe and help your community by reporting hazards",
+      "statusActive": "Status: Active",
+      "reportsThisMonth": "{{count}} Reports this month"
+    },
+    "features": {
+      "reportHazard": {
+        "title": "Report Hazard",
+        "subtitle": "Submit new report"
+      },
+      "donate": {
+        "title": "Donate",
+        "subtitle": "Help victims"
+      },
+      "trackFamily": {
+        "title": "Track Family",
+        "subtitle": "Find loved ones"
+      },
+      "offlineMode": {
+        "title": "Offline Mode",
+        "subtitle": "Emergency backup"
+      }
+    },
+    "nearbyActivity": {
+      "title": "Nearby Activity",
+      "mapPlaceholder": "Interactive Map Placeholder",
+      "warnings": {
+        "highWave": "High Wave Warning",
+        "shelterAvailable": "Shelter Available"
+      }
+    },
+    "myReports": {
+      "title": "My Recent Reports",
+      "newReportButton": "+ New",
+      "reportItems": {
+        "highWaves": {
+          "title": "High Waves",
+          "location": "Marina Beach",
+          "statusVerified": "Verified"
+        },
+        "flooding": {
+          "title": "Flooding",
+          "location": "ECR Road",
+          "statusPending": "Pending"
+        }
+      },
+      "viewAllReports": "View All Reports"
+    }
+  },
+  "sidebar": {
+    "logo": "Sahayak",
+    "navItems": {
+      "dashboard": {
+        "title": "Dashboard",
+        "subtitle": "Overview and quick actions"
+      },
+      "family": {
+        "title": "Family",
+        "subtitle": "Find loved ones"
+      },
+      "offline": {
+        "title": "Offline",
+        "subtitle": "No internet? No worries!"
+      },
+      "sos": {
+        "title": "SOS",
+        "subtitle": "Emergency alerts"
+      },
+      "reportHazard": {
+        "title": "Report Hazard",
+        "subtitle": "Share real-time incident reports"
+      },
+      "missingPersons": {
+        "title": "Missing Persons",
+        "subtitle": "Report or find missing persons"
+      },
+      "donations": {
+        "title": "Donations",
+        "subtitle": "Support disaster relief"
+      },
+      "simulationDrills": {
+        "title": "Simulation Drills",
+        "subtitle": "Practice emergency procedures"
+      },
+      "resources": {
+        "title": "Resources",
+        "subtitle": "Shelters, guides & safety info"
+      },
+      "allReports": {
+        "title": "All Reports",
+        "subtitle": "View detailed reports & filters"
+      },
+      "profile": {
+        "title": "Profile",
+        "subtitle": "Account settings"
+      },
+      "settings": {
+        "title": "Settings",
+        "subtitle": "App preferences"
+      },
+      "logout": {
+        "title": "Log Out",
+        "subtitle": "Sign out of your account"
+      }
+    }
+  },
+  "donationPage": {
+    "unknownCampaign": "Unknown Campaign",
+    "paymentMethodLabel": "Select Payment Method",
+    "upi": "UPI",
+    "card": "Card",
+    "crypto": "Crypto",
+    "amountLabel": "Donation Amount (INR)",
+    "amountPlaceholder": "e.g., 500",
+    "purposeLabel": "Purpose (Optional)",
+    "purposePlaceholder": "e.g., For medical supplies",
+    "payButton": "Pay"
+  },
+  "familyTracker": {
+    "pageTitle": "Family Tracker",
+    "pageSubtitle": "Keep your loved ones safe",
+    "addMemberButton": "+ Add Member",
+    "joinFamilyButton": "Join Family",
+    "locationMapTitle": "Family Location Map",
+    "mapPlaceholder": "Map functionality will be added here.",
+    "status": {
+      "safe": "Safe",
+      "at-risk": "At Risk",
+      "missing": "Missing"
+    },
+    "searchPlaceholder": "Search family members...",
+    "filter": {
+      "all": "All",
+      "safe": "Safe",
+      "at-risk": "At Risk",
+      "missing": "Missing"
+    },
+    "noMembersFound": "No family members found.",
+    "lastSeen": "Last seen:",
+    "deviceId": "Device ID:",
+    "emergencyActionsTitle": "Emergency Actions",
+    "sendAlertButton": "Send Alert to All Family",
+    "reportMissingButton": "Report Missing",
+    "leaveFamilyButton": "Leave Family",
+    "leaveFamilyConfirm": "Are you sure you want to leave the family? This action cannot be undone.",
+    "leaveFamilySuccess": "You have successfully left the family.",
+    "alertSent": "Alert sent to all family members!",
+    "addMemberModal": {
+      "title": "Add New Family Member",
+      "nameLabel": "Name:",
+      "namePlaceholder": "Enter name",
+      "phoneLabel": "Phone Number:",
+      "phonePlaceholder": "Enter phone number",
+      "addButton": "Add"
+    }
+  },
+  "missingPersons": {
+    "pageTitle": "Missing Person Finder",
+    "pageSubtitle": "Report or track missing persons in your community.",
+    "fileComplaintButton": "File Missing Person",
+    "reportFoundButton": "Report Found Person",
+    "listTitle": "Missing Person Complaints",
+    "item": {
+      "age": "Age:",
+      "weight": "Weight (kg):",
+      "phone": "Phone Number:",
+      "description": "Description (Mandatory):",
+      "photo": "Photo:",
+      "location": "Location:",
+      "time": "Time:",
+      "uploadPicture": "Upload Picture (Mandatory):"
+    },
+    "actionButton": "Found",
+    "fileComplaintModal": {
+      "title": "File Missing Person Complaint",
+      "submitButton": "Submit Complaint"
+    },
+    "reportFoundModal": {
+      "title": "Report Found Person",
+      "submitButton": "Report Found"
+    },
+    "alerts": {
+      "complaintSuccess": "Missing person complaint filed successfully!",
+      "reportSuccess": "Found person reported successfully!"
+    },
+    "dummyData": {
+      "person1": {
+        "name": "Alok Singh",
+        "description": "Lost during the flood, last seen near the river bank. Wearing a blue jacket."
+      },
+      "person2": {
+        "name": "Priya Sharma",
+        "description": "Went missing from her home. Wearing a red dress."
+      }
+    }
+  },
+  "offlineDashboard": {
+    "pageTitle": "Offline Mode Dashboard",
+    "pageSubtitle": "Stay connected and share data in low-connectivity areas.",
+    "commStatus": {
+      "label": "Current Communication:",
+      "methods": {
+        "wifiDirect": "Wi-Fi Direct",
+        "bluetooth": "Bluetooth",
+        "sms": "SMS"
+      }
+    },
+    "connectionStatusCard": {
+      "title": "Connection Status",
+      "dotConnected": "Network Connected",
+      "signalLabel": "{{type}} • {{strength}} Signal"
+    },
+    "receivedDataCard": {
+      "title": "Received Data from Nearby Devices",
+      "label": {
+        "deviceId": "Device ID:",
+        "battery": "Battery:",
+        "signal": "Signal:",
+        "location": "Location:"
+      },
+      "role": {
+        "citizen": "Citizen",
+        "refugee": "Refugee"
+      },
+      "dummyData": {
+        "person1": {
+          "name": "John Doe",
+          "role": "Refugee"
+        },
+        "person2": {
+          "name": "Sita",
+          "role": "Citizen"
+        },
+        "person3": {
+          "name": "Misha",
+          "role": "Refugee"
+        }
+      }
+    },
+    "myDeviceCard": {
+      "title": "My Device Data",
+      "label": {
+        "name": "Name",
+        "phone": "Phone No.",
+        "deviceId": "Device ID",
+        "battery": "Battery",
+        "signal": "Signal",
+        "location": "Location (Lat/Long)"
+      }
+    }
+  },
+  "profilePage": {
+    "mainHeader": {
+      "title": "User Profile",
+      "subtitle": "View and manage your personal and medical details."
+    },
+    "personalInfoCard": {
+      "cardHeader": "Your Name",
+      "premiumTag": "Premium User",
+      "sectionHeader": "Personal Information",
+      "labels": {
+        "fullName": "Full Name:",
+        "dob": "Date of Birth:",
+        "gender": "Gender:",
+        "emergencyContact": "Emergency Contact:",
+        "height": "Height:",
+        "weight": "Weight:",
+        "address": "Address:"
+      },
+      "buttons": {
+        "edit": "Edit Profile",
+        "save": "Save Profile"
+      }
+    },
+    "medicalDataCard": {
+      "sectionHeader": "Medical Records",
+      "noDataMessage": "No medical data has been added yet.",
+      "addButton": "Add Medical Data"
+    },
+    "medicalDataModal": {
+      "title": "Add Medical Information",
+      "closeButton": "×",
+      "labels": {
+        "allergies": "Allergies",
+        "disabilities": "Disabilities",
+        "bloodGroup": "Blood Group",
+        "knownHospitals": "Known Hospitals",
+        "pastMedicalHistory": "Past Medical History",
+        "uploadReports": "Upload Medical Reports"
+      },
+      "placeholders": {
+        "allergies": "e.g., Penicillin, Peanuts",
+        "disabilities": "e.g., Vision impairment",
+        "bloodGroup": "e.g., A+",
+        "knownHospitals": "List any hospitals you have visited",
+        "pastMedicalHistory": "Briefly describe your medical history"
+      },
+      "uploadNote": "Upload important medical files (PDF, image, etc.).",
+      "saveButton": "Save Medical Data"
+    }
+  },
+  "reportHazard": {
+    "mainHeader": {
+      "title": "Report a Marine Hazard",
+      "subtitle": "Your report helps keep our waters and coastlines safe."
+    },
+    "labels": {
+      "category": "Category",
+      "description": "Description*",
+      "location": "Location*",
+      "latitude": "Latitude (Optional)",
+      "longitude": "Longitude (Optional)",
+      "media": "Upload Media (Photos/Videos)"
+    },
+    "placeholders": {
+      "category": "e.g., Oil Spill",
+      "description": "Describe the hazard in detail...",
+      "location": "e.g., Near Marina Beach, Chennai",
+      "latitude": "e.g., 13.0827",
+      "longitude": "e.g., 80.2707"
+    },
+    "recommendations": {
+      "ripCurrents": "Rip Currents",
+      "oilSpills": "Oil Spills",
+      "floatingDebris": "Floating Debris",
+      "dangerousMarineLife": "Dangerous Marine Life",
+      "pollutedWater": "Polluted Water",
+      "unsafeWeather": "Unsafe Weather Conditions",
+      "damagedInfrastructure": "Damaged Infrastructure"
+    },
+    "buttons": {
+      "submit": "Submit Report",
+      "submitting": "Submitting..."
+    },
+    "alerts": {
+      "success": "Report submitted successfully! Thank you for your contribution.",
+      "pending": "Submission pending...",
+      "failed": "Submission failed. Please fill in all mandatory fields.",
+      "missingFields": "Submission failed. Please fill in all mandatory fields (Location and Description)."
+    }
+  },
+  "sosScreen": {
+    "title": "Emergency SOS",
+    "subtitle": "Press the button below to send an immediate alert to the authorities and your emergency contacts.",
+    "button": "SOS",
+    "alertMessage": "SOS signal sent! Help is on the way.",
+    "howItWorks": {
+      "title": "How SOS Works",
+      "description": "When you press the SOS button, your phone's location, medical information, and a distress signal will be sent to emergency services and your registered family members. This works even in low-signal areas by attempting to use SMS or other available communication methods."
+    },
+    "stayCalm": {
+      "title": "Stay Calm",
+      "description": "After pressing the button, remain calm and stay in your current location if it is safe to do so. The system will continue to update your location."
+    }
+  },
+  "cardPayment": {
+    "title": "Pay with Card",
+    "donationAmount": "Donation Amount:",
+    "purpose": "Purpose:",
+    "cardNumberLabel": "Card Number",
+    "cardNameLabel": "Cardholder Name",
+    "expiryLabel": "Expiry Date",
+    "cvvLabel": "CVV",
+    "payNowButton": "Pay Now",
+    "fillInAlert": "Please fill in all card details."
+  },
+  "cryptoPayment": {
+    "title": "Pay with Crypto",
+    "donationAmount": "Donation Amount:",
+    "purpose": "Purpose:",
+    "instruction1": "Please send {{amount}} to the wallet address below.",
+    "instruction2": "Ensure you are sending the correct cryptocurrency.",
+    "copyButton": "Copy Address",
+    "alertMessage": "Wallet address copied to clipboard!",
+    "paidButton": "I have paid"
+  },
+  "paymentSuccess": {
+    "title": "Payment Successful!",
+    "message1": "Thank you for your generous donation of",
+    "message2": "Your contribution helps us provide critical support to those in need.",
+    "paymentMethod": "Payment Method:",
+    "goHomeButton": "Go to Dashboard"
+  },
+  "upiPayment": {
+    "title": "Pay with UPI",
+    "donationAmount": "Donation Amount:",
+    "purpose": "Purpose:",
+    "upiIdLabel": "Enter your UPI ID",
+    "upiIdPlaceholder": "e.g., yourname@bank",
+    "sendRequestButton": "Send Payment Request",
+    "requestSent": "Payment request sent. Awaiting confirmation...",
+    "timeRemaining": "Time remaining:",
+    "invalidUpiId": "Please enter a valid UPI ID.",
+    "expiredAlert": "Payment request expired. Please try again."
+  }
+}
