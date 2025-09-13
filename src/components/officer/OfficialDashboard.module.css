@@ -1,0 +1,397 @@
+.officialDashboard {
+    padding: 2rem;
+    background-color: var(--background-color-primary);
+    min-height: 100vh;
+}
+
+/* Header Banner */
+.headerBanner {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden; /* For any background patterns if added later */
+}
+
+.headerBanner .title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.headerBanner .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.statusBadges {
+    display: flex;
+    gap: 1rem;
+}
+
+.badgeActive, .badgePending {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badgeActive i {
+    color: #81c784; /* Light green */
+}
+
+.badgePending {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.badgePending i {
+    color: #ffb74d; /* Light orange */
+}
+
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.statCard {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease-in-out;
+}
+
+.statCard:hover {
+    transform: translateY(-5px);
+}
+
+.statIcon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.statNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+}
+
+/* Content Grid (Validation Queue & Active Hotspots) */
+.contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: larger for queue, smaller for hotspots */
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .contentGrid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+.validationQueue, .activeHotspots, .registrationApprovalCard {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cardTitle i {
+    color: var(--primary-color);
+}
+
+.filterButton {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filterButton:hover {
+    background-color: var(--button-background-hover);
+}
+
+/* Report Item */
+.reportItem {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reportItem:last-of-type {
+    border-bottom: none;
+}
+
+.reportIcon {
+    font-size: 1.5rem;
+    color: #e53e3e; /* Red for alerts */
+    padding-top: 5px; /* Adjust alignment with text */
+}
+
+.reportDetails {
+    flex-grow: 1;
+}
+
+.reportTitle {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.severityHigh {
+    background-color: #e53e3e; /* Red */
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.severityModerate {
+    background-color: #f6ad55; /* Orange */
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.reportMeta {
+    font-size: 0.85rem;
+    color: var(--text-color-light);
+    margin-bottom: 0.5rem;
+}
+
+.reportDescription {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.reportActions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.validateButton, .rejectButton {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.validateButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.validateButton:hover {
+    background-color: #43A047;
+}
+
+.rejectButton {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.rejectButton:hover {
+    background-color: #d32f2f;
+}
+
+.viewAllReports {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.viewAllReports:hover {
+    text-decoration: underline;
+}
+
+/* Active Hotspots */
+.mapPlaceholder {
+    background-color: var(--input-background);
+    height: 150px; /* Fixed height for the map area */
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensures dots don't spill over */
+}
+
+/* Dummy map dots */
+.mapDotRed {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ef5350; /* Light red */
+    border-radius: 50%;
+    top: 20%;
+    left: 25%;
+    box-shadow: 0 0 0 5px rgba(239, 83, 80, 0.3);
+}
+.mapDotPink {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #e91e63; /* Pink */
+    border-radius: 50%;
+    top: 30%;
+    right: 20%;
+    box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.3);
+}
+.mapDotBlue {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #2196f3; /* Blue */
+    border-radius: 50%;
+    bottom: 25%;
+    left: 40%;
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.3);
+}
+
+
+.viewMapButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    z-index: 10; /* Ensure button is above dots */
+}
+
+.viewMapButton:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.hotspotItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hotspotItem:last-of-type {
+    border-bottom: none;
+}
+
+.hotspotName {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.hotspotCount {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.hotspotSeverityCritical {
+    background-color: #e53e3e; /* Red */
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.75rem;
+}
+
+.hotspotSeverityHigh {
+    background-color: #f6ad55; /* Orange */
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--border-radius-xs);
+    font-size: 0.75rem;
+}
+
+/* Registration Approval Card */
+.registrationApprovalCard {
+    grid-column: 1 / -1; /* Make it span across both columns */
+    margin-top: 1.5rem;
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.registrationApprovalCard p {
+    color: var(--text-color-light);
+    margin-bottom: 1rem;
+}
+
+.approveAllButton {
+    background-color: #1a73e8; /* Google blue color */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.approveAllButton:hover {
+    background-color: #155bb5;
+}
+
+/* Ensure Font Awesome is included in your project for icons */
+/* e.g., in public/index.html: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> */
