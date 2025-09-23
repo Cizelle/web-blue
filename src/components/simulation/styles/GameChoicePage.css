@@ -1,0 +1,51 @@
+.game-choice-page-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #50a3ba, #76b6c4);
+}
+
+.game-choice-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(32, 79, 156, 0.14);
+  padding: 44px 60px 44px 60px;
+  max-width: 600px;
+  width: 95%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-choice-card h1 {
+  margin-bottom: 32px;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.game-choice-buttons {
+  display: flex;
+  gap: 32px;
+  margin-top: 18px;
+}
+
+.game-choice-btn {
+  background-color: #2F80ED;
+  color: white;
+  border: none;
+  padding: 18px 54px;
+  font-size: 1.35rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.18s;
+  box-shadow: 0 3px 16px rgba(32, 79, 156, 0.09);
+}
+
+.game-choice-btn:hover {
+  background-color: #1565c0;
+}

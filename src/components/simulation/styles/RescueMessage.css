@@ -1,0 +1,90 @@
+/* overlay to dim the background */
+.rescue-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* card */
+@keyframes rescue-entrance {
+  0% { transform: translateY(10px) scale(.98); opacity: 0; }
+  60% { transform: translateY(-6px) scale(1.02); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.rescue-card {
+  width: min(520px, 92%);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.35);
+  padding: 20px 20px 18px 20px;
+  position: relative;
+  animation: rescue-entrance 360ms cubic-bezier(.2,.9,.2,1);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* close button top-right */
+.rescue-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  padding: 4px 8px;
+}
+
+/* content */
+.rescue-content {
+  text-align: center;
+  padding: 6px 12px;
+}
+
+.rescue-title {
+  margin: 8px 0 6px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.rescue-body {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* small meta row (counts) */
+.rescue-meta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.rescue-count {
+  background: rgba(0,0,0,0.04);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* primary close button */
+.rescue-ok {
+  display: inline-block;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: linear-gradient(90deg,#4b7cff,#6fb1ff);
+  color: white;
+  box-shadow: 0 6px 18px rgba(75,124,255,0.18);
+}

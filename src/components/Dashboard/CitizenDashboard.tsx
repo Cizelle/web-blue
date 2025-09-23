@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import styles from './CitizenDashboard.module.css';
 import { useNavigate } from 'react-router-dom';
 
+
 const CitizenDashboard: React.FC = () => {
     const navigate = useNavigate();
 

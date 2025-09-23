@@ -24,6 +24,7 @@ import ReportHazard from './components/report/ReportHazard';
 import MissingPersonFinder from './components/missing/MissingPersonFinder';
 import ProfilePage from './components/profile/ProfilePage';
 import SettingsPage from './components/settings/SettingsPage';
+import Simulation from './components/simulation/index'; // Import the Simulation component
 
 // Type definition for the user
 interface User {
@@ -207,6 +208,9 @@ const App: React.FC = () => {
         <Route path="/settings" element={<PrivateRoute user={user} allowedRoles={['citizen', 'official', 'analyst']}>
           <DashboardLayout><SettingsPage /></DashboardLayout>
         </PrivateRoute>} />
+         <Route path="/simulation-drills" element={<PrivateRoute user={user} allowedRoles={['citizen', 'official', 'analyst']}>
+                    <DashboardLayout><Simulation /></DashboardLayout>
+                </PrivateRoute>} />
 
         {/* Catch-all route for any undefined paths */}
         <Route path="*" element={<Navigate to={user ? '/' : '/login'} replace />} />
