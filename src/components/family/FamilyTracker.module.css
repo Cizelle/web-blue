@@ -64,15 +64,23 @@
 }
 
 .mapPlaceholder {
+    height: 50vh;
     background-color: #e0e0e0;
     border-radius: 12px;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #666;
-    font-style: italic;
+    /* This value controls the height of the map. Lowering it makes the map shorter. */
+    position: relative;
+    padding-bottom: 1%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mapContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Changed to 100% to fill the new, shorter parent */
+    border-radius: 12px;
+    overflow: hidden; 
 }
 
 .statusCards {

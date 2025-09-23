@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import styles from './CitizenDashboard.module.css';
 import { useNavigate } from 'react-router-dom';
 
+import IndiaMap from '../maps/IndiaMap';
 
 const CitizenDashboard: React.FC = () => {
     const navigate = useNavigate();
@@ -102,8 +103,8 @@ const CitizenDashboard: React.FC = () => {
                 <div className={styles.nearbyActivityCard}>
                     <div className={styles.cardTitle}>Nearby Activity</div>
                     <div className={styles.interactiveMap}>
-                        <p>Interactive Map Placeholder</p>
-                    </div>
+  <IndiaMap />
+</div>
                     <ul className={styles.activityList}>
                         <li>
                             <span className={styles.activityDot} style={{ backgroundColor: '#f44336' }}></span>

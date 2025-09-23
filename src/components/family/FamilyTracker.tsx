@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import styles from './FamilyTracker.module.css';
 import { Link } from 'react-router-dom';
+import FamilyMap from './FamilyMap';   
 
 const FamilyTracker: React.FC = () => {
     // Dummy data for family members
@@ -71,10 +72,9 @@ const FamilyTracker: React.FC = () => {
 
             <div className={styles.mapSection}>
                 <h2 className={styles.mapTitle}>Family Location Map</h2>
-                <div className={styles.mapPlaceholder}>
-                    {/* Placeholder for the map */}
-                    Map functionality will be added here.
-                </div>
+                 <div className={styles.mapPlaceholder}>
+        <FamilyMap />
+      </div>
             </div>
 
             <div className={styles.statusCards}>
