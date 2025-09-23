@@ -13,30 +13,35 @@ const LoginForm: React.FC<LoginFormProps> = ({ onRegisterClick, onLoginSuccess }
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Hardcoded credentials for demonstration
-  const validUsername = 'ipshita';
-  const validPassword = '123456';
-  
-  // This is a placeholder for a real user object from a database
-  const userDetails = {
-    email: 'ipshita@example.com',
-    role: 'Citizen', 
-  };
+// Hardcoded credentials for demonstration with roles
+const credentials = {
+    ipshita: { password: '123456', role: 'citizen', email: 'ipshita@example.com' },
+    adarsh: { password: '123456', role: 'official', email: 'adarsh@example.com' },
+    hello: { password: '123456', role: 'analyst', email: 'hello@example.com' },
+};
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleFormSubmit = (event: React.FormEvent) => {
+const handleFormSubmit = (event: React.FormEvent) => {
     event.preventDefault(); // Prevent the form from refreshing the page
     setErrorMessage(''); // Clear previous errors
 
-    if (username === validUsername && password === validPassword) {
-      onLoginSuccess(userDetails);
+    // Look up the user's data based on the entered username (case-insensitive)
+    const userDetails = credentials[username.toLowerCase() as keyof typeof credentials];
+    
+    // Check if a user was found AND if the entered password matches
+    if (userDetails && password === userDetails.password) {
+      // On successful login, pass the email and the determined role to the parent component
+      onLoginSuccess({
+        email: userDetails.email,
+        role: userDetails.role,
+      });
     } else {
       setErrorMessage('Invalid username or password. Please try again.');
     }
-  };
+};
 
   const handleGoogleLogin = () => {
     setErrorMessage('');
