@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './AnalystDashboard.module.css';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const generateRandomData = () => {
     const data = [];
@@ -62,26 +61,8 @@ const AnalystDashboard: React.FC = () => {
             </div>
 
             <div className={styles.contentGrid}>
-                <div className={styles.sentimentTrend}>
-                    <div className={styles.cardHeader}>
-                        <div className={styles.cardTitle}><i className="fas fa-chart-area"></i> Sentiment Trend</div>
-                    </div>
-                    <ResponsiveContainer width="100%" height={300}>
-                        <LineChart data={chartData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="hour" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Line type="monotone" dataKey="happy" stroke="#4CAF50" name="Happy" />
-                            <Line type="monotone" dataKey="sad" stroke="#2196F3" name="Sad" />
-                            <Line type="monotone" dataKey="fear" stroke="#FFC107" name="Fear" />
-                            <Line type="monotone" dataKey="neutral" stroke="#9E9E9E" name="Neutral" />
-                            <Line type="monotone" dataKey="panicAnxiety" stroke="#FF5722" name="Panic/Anxiety" />
-                        </LineChart>
-                    </ResponsiveContainer>
-                </div>
-                
+                {/* Removed Sentiment Trend (chart) section */}
+
                 <div className={styles.keywordsAndPostsGrid}>
                     <div className={styles.trendingKeywords}>
                         <div className={styles.cardHeader}>

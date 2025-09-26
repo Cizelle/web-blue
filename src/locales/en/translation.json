@@ -527,5 +527,36 @@
     "timeRemaining": "Time remaining:",
     "invalidUpiId": "Please enter a valid UPI ID.",
     "expiredAlert": "Payment request expired. Please try again."
+  },
+  
+  "officialDashboard": {
+    "title": "Official Dashboard",
+    "subtitle": "Live disaster response and citizen assistance management.",
+    "activeResponse": "Active Response",
+    "pendingReportsCount": "Pending Reports",
+    "validatedTodayCount": "Validated Today",
+    "activeHotspotsCount": "Active Hotspots",
+    "citizensHelpedCount": "Citizens Helped",
+    "validationQueueTitle": "Validation Queue",
+    "filterButton": "Filter",
+    "tsunamiWarning": "Tsunami Warning",
+    "high": "High",
+    "mah_time": "6:02 AM, Chennai",
+    "tsunamiDescription": "Large tsunami waves have been reported near the Chennai coast. Immediate evacuation is recommended.",
+    "validateButton": "Validate",
+    "rejectButton": "Reject",
+    "stormSurge": "Storm Surge",
+    "moderate": "Moderate",
+    "pon_time": "7:20 AM, Puducherry",
+    "stormDescription": "Storm surge expected in Puducherry coastal areas. Stay away from shoreline and observe updates.",
+    "viewAllReports": "View all {{count}} pending reports",
+    "activeHotspotsTitle": "Active Hotspots",
+    "viewMapButton": "View Map",
+    "chennaiMarina": "Chennai - Marina Beach",
+    "puducherryBeach": "Puducherry - Beach Road",
+    "reports": "reports",
+    "critical": "Critical",
+    "approveRegistrations": "Approve All Registrations"
   }
+
 }

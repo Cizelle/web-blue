@@ -527,5 +527,35 @@
     "timeRemaining": "शेष समय:",
     "invalidUpiId": "कृपया मान्य यूपीआई आईडी दर्ज करें।",
     "expiredAlert": "भुगतान अनुरोध की समय सीमा समाप्त। कृपया पुनः प्रयास करें।"
+  }, 
+  "officialDashboard": {
+    "title": "अधिकारिक डैशबोर्ड",
+    "subtitle": "संकट प्रतिक्रिया और नागरिक सहायता प्रबंधन लाइव।",
+    "activeResponse": "सक्रिय प्रतिक्रिया",
+    "pendingReportsCount": "लंबित रिपोर्ट्स",
+    "validatedTodayCount": "आज सत्यापित",
+    "activeHotspotsCount": "सक्रिय हॉटस्पॉट्स",
+    "citizensHelpedCount": "सहायता प्राप्त नागरिक",
+    "validationQueueTitle": "सत्यापन कतार",
+    "filterButton": "फ़िल्टर",
+    "tsunamiWarning": "सुनामी चेतावनी",
+    "high": "उच्च",
+    "mah_time": "6:02 पूर्वाह्न, चेन्नई",
+    "tsunamiDescription": "चेन्नई तट के पास बड़ी सुनामी तरंगें देखी गई हैं। तुरंत निकासी की अनुशंसा की जाती है।",
+    "validateButton": "सत्यापित करें",
+    "rejectButton": "अस्वीकार करें",
+    "stormSurge": "तूफानी लहरें",
+    "moderate": "मध्यम",
+    "pon_time": "7:20 पूर्वाह्न, पुड्डुचेरी",
+    "stormDescription": "पुड्डुचेरी तटीय क्षेत्रों में तूफानी लहरें अपेक्षित हैं। तट से दूर रहें और अपडेट देखें।",
+    "viewAllReports": "{{count}} लंबित रिपोर्ट्स देखें",
+    "activeHotspotsTitle": "सक्रिय हॉटस्पॉट्स",
+    "viewMapButton": "मानचित्र देखें",
+    "chennaiMarina": "चेन्नई - मरीना बीच",
+    "puducherryBeach": "पुड्डुचेरी - बीच रोड",
+    "reports": "रिपोर्ट्स",
+    "critical": "गंभीर",
+    "approveRegistrations": "सभी पंजीकरणों को स्वीकृत करें"
   }
+
 }
